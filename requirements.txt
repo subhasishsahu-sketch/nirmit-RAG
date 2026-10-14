@@ -1,0 +1,28 @@
+# ============================================================================
+# PROJECT: Nidana (Offline Odisha State Board RAG Assistant - Classes 9, 10, 12)
+# FILE: requirements.txt
+#
+# COMPATIBILITY: Python 3.10 - 3.13 (Windows / Linux / macOS, CPU-compatible)
+# NOTE:
+#   - SQLite FTS5 (`sqlite3`), Unicode NFC (`unicodedata`), and testing
+#     (`unittest`) are provided by the Python Standard Library.
+#   - No PDF/OCR/vision packages or cloud LLM SDKs are required.
+# ============================================================================
+
+# --- 1. Embedding Service (intfloat/multilingual-e5-base via embeddings.py) ---
+sentence-transformers>=3.0.0,<4.0.0
+torch>=2.2.0,<3.0.0
+transformers>=4.41.0,<5.0.0
+huggingface-hub>=0.23.0,<1.0.0
+numpy>=1.26.0,<3.0.0
+
+# --- 2. Vector Knowledge Base (3_build_databases.py & rag_runtime.py) ---
+chromadb>=0.5.0,<2.0.0
+
+# --- 3. Schema Validation, Text Ingestion & Progress Reporting ---
+pydantic>=2.7.0,<3.0.0
+python-dotenv>=1.0.1,<2.0.0
+tqdm>=4.66.0,<5.0.0
+
+# --- 4. Local Ollama HTTP Client Support ---
+requests>=2.31.0,<3.0.0
